@@ -1,0 +1,120 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29911.84
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{4FA66241-C2CE-49A4-A35F-2E97B1C47882}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RyanPenfold.Repository.DocDb.Tests.Unit", "RyanPenfold.Repository.DocDb.Tests.Unit\RyanPenfold.Repository.DocDb.Tests.Unit.csproj", "{EB9B9A5A-C8C2-4723-A78B-A2E2A898BD5E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RyanPenfold.Repository.DocDb.Tests.Integration", "RyanPenfold.Repository.DocDb.Tests.Integration\RyanPenfold.Repository.DocDb.Tests.Integration.csproj", "{39E685C3-4C7F-4B36-83D3-71E65B1333B9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RyanPenfold.Repository.DocDb", "..\netstandard2.1\RyanPenfold.Repository.DocDb\RyanPenfold.Repository.DocDb.csproj", "{D656ED80-3911-49B1-8A62-ECFA306992A9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RyanPenfold.Utilities", "..\..\utilities\netstandard2.1\RyanPenfold.Utilities\RyanPenfold.Utilities.csproj", "{0A027418-6673-44B0-A919-D16F45AB8C57}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RyanPenfold.Utilities.Tests.Unit", "..\..\utilities\netcoreapp3.1\RyanPenfold.Utilities.Tests.Unit\RyanPenfold.Utilities.Tests.Unit.csproj", "{44884B96-C5FA-4AC2-84CF-4C6A17E89926}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RyanPenfold.BusinessBase.Infrastructure.Tests.Unit", "..\..\business-base-infrastructure\netcoreapp3.1\RyanPenfold.BusinessBase.Infrastructure.Tests.Unit\RyanPenfold.BusinessBase.Infrastructure.Tests.Unit.csproj", "{A8F895D9-EDD8-427E-9F85-9F20F58D6A6B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RyanPenfold.BusinessBase.Infrastructure", "..\..\business-base-infrastructure\netstandard2.1\RyanPenfold.BusinessBase.Infrastructure\RyanPenfold.BusinessBase.Infrastructure.csproj", "{8D1D8A72-75E5-47FC-98D4-5B20525558CD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RyanPenfold.Configuration", "..\..\configuration\netstandard2.1\RyanPenfold.Configuration\RyanPenfold.Configuration.csproj", "{444A2FBA-F6A5-4CB0-A223-073E71D2BE96}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RyanPenfold.Configuration.Tests.Unit", "..\..\configuration\netcoreapp3.1\RyanPenfold.Configuration.Tests.Unit\RyanPenfold.Configuration.Tests.Unit.csproj", "{48E97684-0EB1-441C-A3D4-D1A02DEC8A3B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EB9B9A5A-C8C2-4723-A78B-A2E2A898BD5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB9B9A5A-C8C2-4723-A78B-A2E2A898BD5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB9B9A5A-C8C2-4723-A78B-A2E2A898BD5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB9B9A5A-C8C2-4723-A78B-A2E2A898BD5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39E685C3-4C7F-4B36-83D3-71E65B1333B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39E685C3-4C7F-4B36-83D3-71E65B1333B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39E685C3-4C7F-4B36-83D3-71E65B1333B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39E685C3-4C7F-4B36-83D3-71E65B1333B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D656ED80-3911-49B1-8A62-ECFA306992A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D656ED80-3911-49B1-8A62-ECFA306992A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D656ED80-3911-49B1-8A62-ECFA306992A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D656ED80-3911-49B1-8A62-ECFA306992A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A027418-6673-44B0-A919-D16F45AB8C57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A027418-6673-44B0-A919-D16F45AB8C57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A027418-6673-44B0-A919-D16F45AB8C57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A027418-6673-44B0-A919-D16F45AB8C57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44884B96-C5FA-4AC2-84CF-4C6A17E89926}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44884B96-C5FA-4AC2-84CF-4C6A17E89926}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44884B96-C5FA-4AC2-84CF-4C6A17E89926}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44884B96-C5FA-4AC2-84CF-4C6A17E89926}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8F895D9-EDD8-427E-9F85-9F20F58D6A6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8F895D9-EDD8-427E-9F85-9F20F58D6A6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8F895D9-EDD8-427E-9F85-9F20F58D6A6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8F895D9-EDD8-427E-9F85-9F20F58D6A6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D1D8A72-75E5-47FC-98D4-5B20525558CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D1D8A72-75E5-47FC-98D4-5B20525558CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D1D8A72-75E5-47FC-98D4-5B20525558CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D1D8A72-75E5-47FC-98D4-5B20525558CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{444A2FBA-F6A5-4CB0-A223-073E71D2BE96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{444A2FBA-F6A5-4CB0-A223-073E71D2BE96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{444A2FBA-F6A5-4CB0-A223-073E71D2BE96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{444A2FBA-F6A5-4CB0-A223-073E71D2BE96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48E97684-0EB1-441C-A3D4-D1A02DEC8A3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48E97684-0EB1-441C-A3D4-D1A02DEC8A3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48E97684-0EB1-441C-A3D4-D1A02DEC8A3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48E97684-0EB1-441C-A3D4-D1A02DEC8A3B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EB9B9A5A-C8C2-4723-A78B-A2E2A898BD5E} = {4FA66241-C2CE-49A4-A35F-2E97B1C47882}
+		{39E685C3-4C7F-4B36-83D3-71E65B1333B9} = {4FA66241-C2CE-49A4-A35F-2E97B1C47882}
+		{44884B96-C5FA-4AC2-84CF-4C6A17E89926} = {4FA66241-C2CE-49A4-A35F-2E97B1C47882}
+		{A8F895D9-EDD8-427E-9F85-9F20F58D6A6B} = {4FA66241-C2CE-49A4-A35F-2E97B1C47882}
+		{48E97684-0EB1-441C-A3D4-D1A02DEC8A3B} = {4FA66241-C2CE-49A4-A35F-2E97B1C47882}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {44D970F5-B1B3-4C16-850A-450036ED9428}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 10
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://ryanpenfold.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = RyanPenfold.Repository.DocDb.Tests.Unit\\RyanPenfold.Repository.DocDb.Tests.Unit.csproj
+		SccProjectTopLevelParentUniqueName1 = RyanPenfold.Repository.DocDb.sln
+		SccProjectName1 = RyanPenfold.Repository.DocDb.Tests.Unit
+		SccLocalPath1 = RyanPenfold.Repository.DocDb.Tests.Unit
+		SccProjectUniqueName2 = RyanPenfold.Repository.DocDb.Tests.Integration\\RyanPenfold.Repository.DocDb.Tests.Integration.csproj
+		SccProjectTopLevelParentUniqueName2 = RyanPenfold.Repository.DocDb.sln
+		SccProjectName2 = RyanPenfold.Repository.DocDb.Tests.Integration
+		SccLocalPath2 = RyanPenfold.Repository.DocDb.Tests.Integration
+		SccProjectUniqueName3 = ..\\netstandard2.1\\RyanPenfold.Repository.DocDb\\RyanPenfold.Repository.DocDb.csproj
+		SccProjectName3 = ../netstandard2.1/RyanPenfold.Repository.DocDb
+		SccLocalPath3 = ..\\netstandard2.1\\RyanPenfold.Repository.DocDb
+		SccProjectUniqueName4 = ..\\..\\utilities\\netstandard2.1\\RyanPenfold.Utilities\\RyanPenfold.Utilities.csproj
+		SccProjectName4 = ../../RyanPenfold.Utilities/netstandard2.1/RyanPenfold.Utilities
+		SccLocalPath4 = ..\\..\\utilities\\netstandard2.1\\RyanPenfold.Utilities
+		SccProjectUniqueName5 = ..\\..\\utilities\\netcoreapp3.1\\RyanPenfold.Utilities.Tests.Unit\\RyanPenfold.Utilities.Tests.Unit.csproj
+		SccProjectTopLevelParentUniqueName5 = RyanPenfold.Repository.DocDb.sln
+		SccProjectName5 = ../../RyanPenfold.Utilities/netcoreapp3.1/RyanPenfold.Utilities.Tests.Unit
+		SccLocalPath5 = ..\\..\\utilities\\netcoreapp3.1\\RyanPenfold.Utilities.Tests.Unit
+		SccProjectUniqueName6 = ..\\..\\business-base-infrastructure\\netcoreapp3.1\\RyanPenfold.BusinessBase.Infrastructure.Tests.Unit\\RyanPenfold.BusinessBase.Infrastructure.Tests.Unit.csproj
+		SccProjectTopLevelParentUniqueName6 = RyanPenfold.Repository.DocDb.sln
+		SccProjectName6 = ../../RyanPenfold.BusinessBase.Infrastructure/netcoreapp3.1/RyanPenfold.BusinessBase.Infrastructure.Tests.Unit
+		SccLocalPath6 = ..\\..\\business-base-infrastructure\\netcoreapp3.1\\RyanPenfold.BusinessBase.Infrastructure.Tests.Unit
+		SccProjectUniqueName7 = ..\\..\\business-base-infrastructure\\netstandard2.1\\RyanPenfold.BusinessBase.Infrastructure\\RyanPenfold.BusinessBase.Infrastructure.csproj
+		SccProjectName7 = ../../RyanPenfold.BusinessBase.Infrastructure/netstandard2.1/RyanPenfold.BusinessBase.Infrastructure
+		SccLocalPath7 = ..\\..\\business-base-infrastructure\\netstandard2.1\\RyanPenfold.BusinessBase.Infrastructure
+		SccProjectUniqueName8 = ..\\..\\configuration\\netstandard2.1\\RyanPenfold.Configuration\\RyanPenfold.Configuration.csproj
+		SccProjectName8 = ../../RyanPenfold.Configuration/netstandard2.1/RyanPenfold.Configuration
+		SccLocalPath8 = ..\\..\\configuration\\netstandard2.1\\RyanPenfold.Configuration
+		SccProjectUniqueName9 = ..\\..\\configuration\\netcoreapp3.1\\RyanPenfold.Configuration.Tests.Unit\\RyanPenfold.Configuration.Tests.Unit.csproj
+		SccProjectTopLevelParentUniqueName9 = RyanPenfold.Repository.DocDb.sln
+		SccProjectName9 = ../../RyanPenfold.Configuration/netcoreapp3.1/RyanPenfold.Configuration.Tests.Unit
+		SccLocalPath9 = ..\\..\\configuration\\netcoreapp3.1\\RyanPenfold.Configuration.Tests.Unit
+	EndGlobalSection
+EndGlobal

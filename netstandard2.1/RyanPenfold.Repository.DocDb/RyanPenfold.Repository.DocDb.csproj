@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\business-base-infrastructure\netstandard2.1\RyanPenfold.BusinessBase.Infrastructure\RyanPenfold.BusinessBase.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\..\configuration\netstandard2.1\RyanPenfold.Configuration\RyanPenfold.Configuration.csproj" />
+    <ProjectReference Include="..\..\..\utilities\netstandard2.1\RyanPenfold.Utilities\RyanPenfold.Utilities.csproj" />
+  </ItemGroup>
+
+</Project>
