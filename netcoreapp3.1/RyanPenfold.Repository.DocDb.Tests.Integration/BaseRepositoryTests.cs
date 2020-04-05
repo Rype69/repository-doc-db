@@ -446,6 +446,77 @@ namespace RyanPenfold.Repository.DocDb.Tests.Integration
         }
 
         /// <summary>
+        /// Tests the <see cref="BaseRepository{T}.FindById"/> method.
+        /// </summary>
+        [TestMethod]
+        public void FindById_RelativeUpperDirectoryPathExplicitlySpecified_RepositoryLooksAtCorrectDirectory()
+        {
+            // Arrange
+            var originalDirectoryPath = Configuration.ConfigurationSettings.DataDirectoryPath;
+            var originalFilePath = System.IO.Path.Combine(originalDirectoryPath, "[Foundation].[Article].json");
+            string newAbsoluteDirectoryPath = null;
+            string filePath = null;
+            var count = 10;
+
+            try
+            {
+                if (System.IO.File.Exists(originalFilePath))
+                    Utilities.IO.File.Delete(originalFilePath);
+
+                var newRelativeDirectoryPath = "..\\data444";
+                var combinedPath = System.IO.Path.Combine(Utilities.IO.UncPath.GetApplicationDirectory(), newRelativeDirectoryPath);
+                newAbsoluteDirectoryPath = System.IO.Path.GetFullPath(combinedPath);
+                if (System.IO.Directory.Exists(newAbsoluteDirectoryPath))
+                    Utilities.IO.Directory.Delete(newAbsoluteDirectoryPath);
+                Utilities.IO.Directory.Create(newAbsoluteDirectoryPath);
+                Configuration.ConfigurationSettings.DataDirectoryPath = newRelativeDirectoryPath;
+
+                var articles = new List<Article>();
+                for (var i = 0; i < count; i++)
+                {
+                    articles.Add(new Article
+                    {
+                        ApprovalStatus = 444,
+                        ApprovedBy = "Ryan",
+                        DateApproved = DateTime.Now,
+                        DateTime = DateTime.Now.AddDays(-1),
+                        Id = Guid.NewGuid(),
+                        Rating = 5,
+                        RelatesToId = Guid.NewGuid().ToString(),
+                        RelatesToType = "Test",
+                        ThreadId = Guid.NewGuid(),
+                        UserId = Guid.NewGuid().ToString(),
+                        WebsiteId = Guid.NewGuid()
+                    });
+                }
+
+                var serialisedArticles = JsonConvert.SerializeObject(articles);
+                var serialisedArticleBytes = System.Text.Encoding.Unicode.GetBytes(serialisedArticles);
+                filePath = System.IO.Path.Combine(newAbsoluteDirectoryPath, "[Foundation].[Article].json");
+                System.IO.File.WriteAllBytes(filePath, serialisedArticleBytes);
+                var articleRepository = new ArticleRepository();
+                var sourceObject = articles.First(a => a != null);
+
+                // Act
+                var result = articleRepository.FindById(sourceObject.Id);
+
+                // Assert
+                var comparer = new Utilities.Collections.EqualityComparer<Article>();
+                Assert.IsTrue(comparer.Equals(sourceObject, result));
+            }
+            finally
+            {
+                if (!string.IsNullOrWhiteSpace(filePath))
+                    Utilities.IO.File.Delete(filePath);
+
+                if (!string.IsNullOrWhiteSpace(newAbsoluteDirectoryPath))
+                    Utilities.IO.Directory.Delete(newAbsoluteDirectoryPath);
+
+                Configuration.ConfigurationSettings.DataDirectoryPath = originalDirectoryPath;
+            }
+        }
+
+        /// <summary>
         /// Tests the <see cref="BaseRepository{T}.FindByIds"/> method.
         /// </summary>
         [TestMethod]

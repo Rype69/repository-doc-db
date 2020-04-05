@@ -279,14 +279,16 @@ namespace RyanPenfold.Repository.DocDb
             {
                 var fileName = (TypeMap as BaseClassMap<T>)?.DeriveFileName();
 
-                var path = Configuration.ConfigurationSettings.DataDirectoryPath;
-                if (string.IsNullOrWhiteSpace(path) || string.Equals(path, "\\"))
-                    path = Utilities.IO.UncPath.GetApplicationDirectory();
-                else if (!string.IsNullOrWhiteSpace(path) && path.StartsWith("\\"))
-                    path = $"{Utilities.IO.UncPath.GetApplicationDirectory()}{path}";
+                var directoryPath = Configuration.ConfigurationSettings.DataDirectoryPath;
+                if (string.IsNullOrWhiteSpace(directoryPath) || string.Equals(directoryPath, "\\"))
+                    directoryPath = Utilities.IO.UncPath.GetApplicationDirectory();
+                else if (!string.IsNullOrWhiteSpace(directoryPath) && directoryPath.StartsWith("\\"))
+                    directoryPath = $"{Utilities.IO.UncPath.GetApplicationDirectory()}{directoryPath}";
+                else if (!string.IsNullOrWhiteSpace(directoryPath) && directoryPath.StartsWith(".."))
+                    directoryPath = System.IO.Path.GetFullPath(System.IO.Path.Combine(Utilities.IO.UncPath.GetApplicationDirectory(), directoryPath));
 
                 if (fileName != null)
-                    FilePath = System.IO.Path.Combine(path, fileName);
+                    FilePath = System.IO.Path.Combine(directoryPath, fileName);
             }
 
             if (FileService == null)
@@ -313,6 +315,9 @@ namespace RyanPenfold.Repository.DocDb
             }
         }
 
+        /// <summary>
+        /// Links all nested instances of <see cref="T"/> in the <see cref="Data"/>.
+        /// </summary>
         protected void Link(T datum)
         {
             var allPropertiesOfType = typeof(T).GetProperties();

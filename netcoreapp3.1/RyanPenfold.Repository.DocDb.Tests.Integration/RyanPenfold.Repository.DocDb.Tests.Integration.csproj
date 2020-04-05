@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup Label="Globals">
     <SccProjectName>SAK</SccProjectName>
@@ -22,6 +22,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\foundation\netcoreapp3.1\RyanPenfold.Foundation.Model\RyanPenfold.Foundation.Model.csproj" />
+    <ProjectReference Include="..\..\..\ioc-container\netstandard2.1\RyanPenfold.IocContainer\RyanPenfold.IocContainer.csproj" />
     <ProjectReference Include="..\..\netstandard2.1\RyanPenfold.Repository.DocDb\RyanPenfold.Repository.DocDb.csproj" />
   </ItemGroup>
 
